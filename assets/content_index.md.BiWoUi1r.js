@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.CSOa_3UV.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"content/index.md","filePath":"content/index.md"}'),a={name:"content/index.md"};function o(c,r,s,d,i,p){return n(),t("div")}const f=e(a,[["render",o]]);export{m as __pageData,f as default};
