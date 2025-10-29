@@ -1,0 +1,27 @@
+:root {
+    --vp-home-hero-name-color: rgb(217,105, 125);
+    --vp-button-brand-hover-bg: rgb(193, 93, 111);
+    --vp-c-brand-3: rgb(193, 93, 111);
+    --vp-c-brand-1: rgb(217,105, 125);
+}
+
+figure > img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+
+  figure figcaption {
+    margin-top: 10px;
+    text-align: center;
+}
+
+figure{
+    padding: 20px;
+}
+
+figcaption::before {    
+    content: "Fig. ";    
+    font-weight: bold; /* Optional: Make it bold or style it differently */
+}
