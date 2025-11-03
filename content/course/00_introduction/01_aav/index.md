@@ -26,6 +26,6 @@
 
 ### AAV4 – Implantation et validation sur système réel
 
-- [C1] Implémenter sur microcontrôleur un correcteur linéaire (P, PI ou PID) en utilisant une discrétisation numérique adaptée (ex. méthode d’Euler).
-- [C2] Utiliser un oscilloscope ou un système de mesure numérique pour caractériser le comportement d'un système.
+- [C1] Utiliser un oscilloscope ou un système de mesure numérique pour caractériser le comportement d'un système.
+- [C2] Implémenter sur microcontrôleur un correcteur linéaire (P, PI ou PID) en utilisant une discrétisation numérique adaptée (ex. méthode d’Euler).
 - [C3] Valider par simulation et expérimentalement les performances d'une stratégie de commande : stabilité, précision, rapidité, robustesse.

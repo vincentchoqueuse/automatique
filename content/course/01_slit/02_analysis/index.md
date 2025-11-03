@@ -14,7 +14,7 @@ a_n \frac{d^n y(t)}{dt^n} + \cdots + a_1 \frac{dy(t)}{dt} + a_0 y(t) = b_m \frac
 
 où :
 * $y(t)$ est la sortie du système,
-* $e(t)$ est l'entrée du système,
+* $x(t)$ est l'entrée du système,
 * $a_0, a_1, \ldots, a_n$ sont des coefficients constants associés aux dérivées de la sortie $y(t)$,
 * $b_0, b_1, \ldots, b_m$ sont des coefficients constants associés aux dérivées de l'entrée $x(t)$,
 * $n\ge m$ est l'ordre de l'équation différentielle
@@ -112,7 +112,7 @@ La convolution d'une fonction avec une constante est simplement la fonction mult
 
 ### Causalité
 
-Un système LTI est causal si la sortie du système à un instant donné dépend uniquement des valeurs présentes et passées de l'entrée, et non des valeurs futures.  Par rapport à la réponse impulsionnelle $h(t)$ du système, cela impliue que :
+Un système SLTI est causal si la sortie du système à un instant donné dépend uniquement des valeurs présentes et passées de l'entrée, et non des valeurs futures.  Par rapport à la réponse impulsionnelle $h(t)$ du système, cela impliue que :
 
 $$h(t) = 0 \quad \text{pour tout} \quad t < 0.$$
 
@@ -121,7 +121,7 @@ Autrement dit, $h(t)$ doit être une fonction causale, nulle pour $t < 0$. Cela 
 
 ### Stabilité 
 
-Un système linéaire et invariant dans le temps (LTI) est stable si et seulement si, pour toute entrée bornée, la sortie est également bornée. Par rapport à la réponse impulsionnelle $h(t)$ du système, cela implique que :
+Un système linéaire et invariant dans le temps (SLTI) est stable si et seulement si, pour toute entrée bornée, la sortie est également bornée. Par rapport à la réponse impulsionnelle $h(t)$ du système, cela implique que :
 
 $$\int_{-\infty}^{\infty} |h(t)| \, dt < \infty.$$
 

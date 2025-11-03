@@ -3,6 +3,7 @@ outline: [2,3]
 ---
 # Analyse des SLIT via la Transformée de Laplace
 
+Après avoir décrit les SLIT à l’aide d’équations différentielles et de convolutions, ce chapitre présente un outil puissant pour résoudre et analyser ces systèmes: la transformée de Laplace.
 
 ## Transformée de Laplace
 
@@ -167,7 +168,7 @@ $$f(\infty)=\lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s)$$
 
 ### Hypothèses 
 
-Considérons un SLIT d'ordre $N$ modélisé par une équation différentielle linéaires à coefficients constants
+Considérons un SLIT d'ordre $N$ modélisé par une équation différentielle linéaire à coefficients constants
 $$
 a_n \frac{d^n y(t)}{dt^n} + \cdots + a_1 \frac{dy(t)}{dt} + a_0 y(t) = b_n \frac{d^n x(t)}{dt^n}  + \cdots + b_1 \frac{dx(t)}{dt} + b_0 x(t)$$
 
@@ -221,7 +222,7 @@ $$
 En utilisant la propriété de la transformée de Laplace de la dérivée, nous avons :
 
 $$
-sY(s)  + Y(s) = K X(s)
+\tau sY(s)  + Y(s) = K X(s)
 $$
 
 Nous pouvons maintenant isoler $Y(s)$ en factorisant :
@@ -240,7 +241,7 @@ $$
 
 #### Forme Factorisée
 
-En déterminant les racines des polynômes au numérateur et au denominateur, nous pouvons obtenir une **representation sous forme factorisée** de la fonction de transfert : 
+En déterminant les racines des polynômes au numérateur et au dénominateur, nous pouvons obtenir une **representation sous forme factorisée** de la fonction de transfert : 
 
 $$
 H(s) = \frac{K (s - z_1)(s - z_2) \cdots (s - z_n)}{(s - p_1)(s - p_2) \cdots (s - p_n)}

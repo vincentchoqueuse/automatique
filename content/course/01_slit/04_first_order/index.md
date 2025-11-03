@@ -4,6 +4,10 @@ outline: [2,3]
 
 # Analyse des Systèmes de Premier Ordre
 
+Les systèmes de premier ordre sont parmi les modèles les plus simples mais aussi les plus répandus en automatique.
+Ils permettent de décrire le comportement dynamique de nombreux procédés physiques : circuits RC, systèmes thermiques, capteurs, etc.
+Ce chapitre introduit leurs caractéristiques temporelles et fréquentielles, et montre comment les relier aux paramètres physiques du système.
+
 ## Modélisation d'un système passe-bas (LP)
 
 ### Equation Différentielle

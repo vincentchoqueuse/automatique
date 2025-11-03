@@ -12,7 +12,7 @@ Soit un système SISO ayant pour entrée un signal $x(t)$ et pour sortie un sign
     <figcaption>Système SISO </figcaption>
 </figure>
 
-Dans ce cours, nous allons nous restreindre à l'analyse des systèmes dit linéaires et invariants dans le temps (SLIT).
+Dans ce cours, nous allons nous restreindre à l'analyse des systèmes dit linéaires et invariants dans le temps. L’étude des systèmes SLIT constitue la base de l’automatique. Ces systèmes, bien que simplifiés, permettent de modéliser et d’analyser de nombreux procédés physiques (mécaniques, électriques, thermiques, etc.) à l’aide d’outils mathématiques puissants et universels.
 
 ## Hypothèses 
 

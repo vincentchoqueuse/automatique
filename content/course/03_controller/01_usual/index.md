@@ -166,6 +166,6 @@ $$ \varphi_{\max} = \arcsin\!\left(\frac{a-1}{a+1}\right)$$
 :::
 
 <figure>
-    <img src="./img/fig1_PID.png" width="600">
-    <figcaption>Diagramme de Bode d'un correcteur PID</figcaption>
+    <img src="./img/fig1_AP.png" width="600">
+    <figcaption>Diagramme de Bode d'un correcteur par avance de phase</figcaption>
 </figure>

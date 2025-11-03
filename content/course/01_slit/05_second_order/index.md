@@ -3,6 +3,9 @@ outline: [2,3]
 ---
 # Analyse des Systèmes de Second Ordre
 
+Après avoir étudié les systèmes du premier ordre, nous abordons les systèmes de second ordre, qui décrivent une grande variété de phénomènes physiques (mécaniques, électriques, hydrauliques, etc.).
+Leur comportement dépend fortement du coefficient d’amortissement $\xi$, qui détermine la présence ou non d’oscillations.
+
 ## Modélisation d'un système passe-bas (LP)
 
 ### Equation Différentielle
