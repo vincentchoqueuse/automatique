@@ -17,7 +17,7 @@ $$\frac{1}{\omega_n^2}\frac{d^2 y(t)}{dt^2}+\frac{2\xi}{\omega_n}\frac{d y(t)}{d
 
 * $K$ : gain statique,
 * $\xi \ge 0$ : coefficient d\'amortissement,
-* $\omega_n$ : pulsation propre ou naturelle (en rad/s).
+* $\omega_n$ : pulsation naturelle ou naturelle (en rad/s).
 
 Notons que certains ouvrages préfèrent utiliser, au lieu du paramètre
 $\xi$, le facteur de qualité $Q=\frac{1}{2\xi}$.
@@ -47,7 +47,7 @@ $$p_{1, 2}=-\omega_n(\xi \pm j\sqrt{1-\xi^2})$$
 
 ::: tip **Identification lorsque $0 < \xi <1$**
 
-Lorsque $0<\xi<1$, il est possible d'identifier rapidement la pulsation propre et le coefficient d'amortissement à partir des pôles en exploitant le fait que $\omega_n=|p_{1, 2}|$ et que $\xi=-\Re e(p_{1,2})/|p_{1,2}|$.
+Lorsque $0<\xi<1$, il est possible d'identifier rapidement la pulsation naturelle et le facteur d'amortissement à partir des pôles en exploitant le fait que $\omega_n=|p_{1, 2}|$ et que $\xi=-\Re e(p_{1,2})/|p_{1,2}|$.
 
 :::
 
@@ -292,7 +292,7 @@ A la pulsation $\omega=\omega_n$, le module et l'argument sont respectivement do
 
 ::: tip **Résonance**
 
-Lorsque $\xi < \frac{1}{\sqrt{2}}\approx 0.707$, le module présente un extrémum en $\omega_r=\omega_n\sqrt{1-2\xi^2}$, où $\omega_r$ désigne la pulsation de résonance. Cet extrémum est caractérisé par le facteur de résonance $M_{dB}=20\log_{10}(|H(j\omega_r)|/|K|)$. Les abaques de second ordre permettent d'obtenir $M_{dB}$ en fonction du coefficient d'amortissement $\xi$.
+Lorsque $\xi < \frac{1}{\sqrt{2}}\approx 0.707$, le module présente un extrémum en $\omega_r=\omega_n\sqrt{1-2\xi^2}$, où $\omega_r$ désigne la pulsation de résonance. Cet extrémum est caractérisé par le facteur de résonance $M_{dB}=20\log_{10}(|H(j\omega_r)|/|K|)$. Les abaques de second ordre permettent d'obtenir $M_{dB}$ en fonction du facteur d'amortissement $\xi$.
 
 :::
 

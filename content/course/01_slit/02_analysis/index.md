@@ -36,6 +36,15 @@ $$L\frac{di(t)}{dt} + Ri(t) = v_e(t)$$
 
 :::
 
+### Causalité
+
+Un système SLIT est causal si la sortie du système à un instant donné dépend uniquement des valeurs présentes et passées de l'entrée, et non des valeurs futures. 
+
+### Stabilité (BIBO)
+
+Un système linéaire et invariant dans le temps (SLTI) est stable si et seulement si, pour toute entrée bornée, la sortie est également bornée.
+
+
 ## Réponse du système à une entrée quelconque
 
 Toute fonction d'entrée $x(t)$ peut être décomposée comme une somme d'impulsion de Dirac décalées dans le temps :
@@ -112,7 +121,7 @@ La convolution d'une fonction avec une constante est simplement la fonction mult
 
 ### Causalité
 
-Un système SLTI est causal si la sortie du système à un instant donné dépend uniquement des valeurs présentes et passées de l'entrée, et non des valeurs futures.  Par rapport à la réponse impulsionnelle $h(t)$ du système, cela impliue que :
+Un système SLIT est causal si sa réponse impulsionnelle $h(t)$ respecte
 
 $$h(t) = 0 \quad \text{pour tout} \quad t < 0.$$
 
@@ -121,7 +130,7 @@ Autrement dit, $h(t)$ doit être une fonction causale, nulle pour $t < 0$. Cela 
 
 ### Stabilité 
 
-Un système linéaire et invariant dans le temps (SLTI) est stable si et seulement si, pour toute entrée bornée, la sortie est également bornée. Par rapport à la réponse impulsionnelle $h(t)$ du système, cela implique que :
+Un système SLIT est stable si et seulement si
 
 $$\int_{-\infty}^{\infty} |h(t)| \, dt < \infty.$$
 
@@ -164,110 +173,3 @@ Il est possible d'obtenir simplement la réponse indicielle du système en utili
     <img src="./img/fig2.png">
     <figcaption>Réponse indicielle d'un système de premier ordre. </figcaption>
 </figure>
-
-## Réponse Fréquentielle
-
-Les systèmes SLIT vont avoir un comportement singulier sur les signaux d'entrée composés d'exponentielles complexes. Ce comportement motive l'utilisation d'une représentation spécifique nommée **réponse fréquentielle**.
-
-### Cas des exponentielles complexes
-
-Un signal exponentiel complexe de pulsation $\omega_0$ s'exprime mathématiquement sous la forme :
-$$x(t)=e^{j\omega_0 t}$$
-Ce signal est periodique de période $T_0=\frac{2\pi}{\omega_0}$. Lorsque le signal d'entrée est une exponentielle complexe de pulsation $\omega_0$, la sortie s'exprime sous la forme :
-
-$$
-y(t)= H(j\omega_0)e^{j\omega_0 t}
-$$
-où
-$$H(j\omega_0)=\int_{-\infty}^{\infty} h(t) e^{-j\omega_0 t}dt$$
-correspond à la transformée de Fourier de la réponse impulsionnelle. 
-
-::: details Démonstration
-En utilisant la définition et la propriété de commutativité du produit de convolution, nous obtenons :
-$$
-\begin{align}
-y(t) &= (x * h)(t)\\
-&=(h * x)(t)\\
-&=\int_{-\infty}^{\infty} h(\tau) e^{j\omega_0 (t-\tau)}d\tau\\
-&=e^{j\omega_0 t} \int_{-\infty}^{\infty} h(\tau) e^{-j\omega_0 \tau}d\tau\\
-&= H(j\omega_0)e^{j\omega_0 t}
-\end{align}
-:::
-
-En d'autres termes, le système SLIT va uniquement multiplier l'exponentielle complexe en entrée par une constante qui ne dépend pas du temps. La réponse fréquentielle est généralement complexe et il est courant d'utiliser une représentation conjointe du module, $|H(j\omega)|$, et de l'argument, $\arg[H(j\omega)]$, en fonction de $\omega$.
-
-
-
-::: details Exemple : réponse fréquentielle d'un premier ordre
-
-Considérons un système de premier ordre de gain statique unitaire et de constante de temps unitaire. La réponse impulsionnelle de ce système est donnée par :
-
-$$h(t) = e^{-t} \text{ pour } t \geq 0$$
-
-La réponse fréquentielle $H(j\omega)$ d'un système est la transformée de Fourier de sa réponse impulsionnelle $h(t)$. En utilisant l'expression de $h(t)$, nous obtenons :
-
-$$
-\begin{align}
-H(j\omega) &= \int_{0}^{\infty} e^{-t} e^{-j\omega t} dt\\
-&=\int_{0}^{\infty} e^{-t(1 + j\omega)} dt
-\end{align}
-$$
-
-L'intégrale de $e^{-at}$ de 0 à $\infty$ est $\frac{1}{a}$ pour $\Re e(a) > 0$. Ici, $a = 1 + j\omega$, donc :
-
-$$
-H(j\omega) = \frac{1}{1+ j\omega}
-$$
-:::
-
-
-
-### Cas des sinusoïdes 
-
-Un signal sinusoidal de pulsation $\omega_0$ s'exprime sous la forme :
-
-$$x(t)=A\cos(\omega_0 t+\varphi)$$
-
-En utilisant la décomposition d'Euler, il est possible de décomposer $x(t)$ sous la forme de 2 exponentielles complexes. Lorsque le signal d'entrée est une sinusoide de pulsation $\omega_0$, la sortie d'un système SLIT s'exprime alors sous la forme :
-$$
-y(t)= A|H(j\omega_0)|\cos(\omega_0 t+\varphi+\arg[H(j\omega_0)])
-$$
-où $H(j\omega_0)$ correspond à la transformée de Fourier de la réponse impulsionnelle. 
-
-::: details Démonstration
-
-En utilisant la décomposition d'Euler, ce signal peut se décomposer sous la forme de deux exponentielles complexes:
-$$
-x(t) = A\frac{e^{j(\omega_0 t+\varphi)}+e^{-j(\omega_0 t+\varphi)}}{2}
-$$
-
-Pour un système SLIT, la réponse à une exponentielle complexe $e^{j\omega_0 t}$ est donnée par $H(j\omega_0)e^{j\omega_0 t}$. Ainsi, nous obtenons :
-
-$$
-y(t) = A\frac{H(j\omega_0)e^{j(\omega_0 t+\varphi)}+H(-j\omega_0)e^{-j(\omega_0 t+\varphi)}}{2}
-$$
-
-Pour une réponse impulsionnelle $h(t)$ réelle, il est possible d'établir que $H(-j\omega_0)=H^*(j\omega_0)$. En remarquant que la sortie s'exprime sous la forme $\Re e(z)=\frac{z+z^*}{2}$, il en vient que :
-
-$$y(t) = A \Re e\left[ H(j\omega_0) e^{j(\omega_0 t + \varphi)} \right]$$
-
-En utilisant la décomposition module/argument $H(j\omega_0)= |H(j\omega_0)| e^{j \arg[H(j\omega_0)]}$, nous obtenons finalement
-
-$$y(t) = A |H(j\omega_0)| \cos(\omega_0 t + \varphi + \arg[H(j\omega_0)])$$
-
-:::
-
-### Cas des signaux périodiques
-
-Un signal est dit périodique de période $T_0$ si il respecte la propriété $x(t)=x(t+T_0)$ pour tout $t$. La décomposition en séries de Fourier permet d'exprimer $x(t)$ sous la forme d'une somme d'exponentielles complexes de pulsation $n\omega_0$ :  
-
-$$x(t)=\sum_{n=-\infty}^{\infty} c_n e^{-jn\omega_0t}$$
-
-où $\omega_0=2\pi /T_0$.
-
-En utilisant le principe de superposition des systèmes SLIT, il est possible de montrer que la sortie du système s'exprime sous la forme 
-
-$$
-y(t) = \sum_{n=-\infty}^{\infty} c_n H(jn\omega_0)e^{jn\omega_0 t}
-$$
-

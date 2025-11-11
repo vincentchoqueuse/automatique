@@ -4,7 +4,7 @@ outline: [2,3]
 
 # Performances Dynamique des Systèmes Bouclés
 
-Cette section s’intéresse aux performances dynamiques (temps de réponse, dépassement). Il présente l’utilisation de l’abaque de Black-Nichols pour estimer les caractéristiques d’un système bouclé à partir du lieu de Black de la boucle ouverte. En se basant sur une approximation par un système du second ordre, les grandeurs dynamiques (gain statique, pulsation propre, facteur d’amortissement) sont extraites et validées par comparaison avec les réponses temporelles.
+Cette section s’intéresse aux performances dynamiques (temps de réponse, dépassement). Il présente l’utilisation de l’abaque de Black-Nichols pour estimer les caractéristiques d’un système bouclé à partir du lieu de Black de la boucle ouverte. En se basant sur une approximation par un système du second ordre, les grandeurs dynamiques (gain statique, pulsation naturelle, facteur d’amortissement) sont extraites et validées par comparaison avec les réponses temporelles.
 
 ## Objectif
 
@@ -44,7 +44,7 @@ Attention, la méthodologie décrite ci-dessous permet d'extraire les paramètre
  
 * La différence $M_{dB}=G_{M}-G_0$ (dB) correspond au facteur de résonance en boucle fermée. L'utilisation des abaques de second ordre permet ensuite de trouver le facteur d'amortissement en boucle fermée $\xi$ à partir de $M_{dB}$.
 
-* La pulsation propre en boucle fermée s'obtient finalement à partir $\xi$ et $\omega_r$ via la relation 
+* La pulsation naturelle en boucle fermée s'obtient finalement à partir $\xi$ et $\omega_r$ via la relation 
 
 $$\omega_n = \frac{\omega_r}{\sqrt{1-2\xi^2}}$$
 
@@ -61,7 +61,7 @@ La figure ci-dessus présente le lieu de transfert d'un système en boucle ouver
 * un gain statique en BF égal à $G_0=-6$dB, soit $K=10^{-6/20}\approx 0.5$.
 * un gain maximum en BF égal à $G_M=3$dB et une pulsation de résonance égale à $\omega_r=0.795$ rad/s.
 * un facteur de résonance en BF égale à $M_{dB} = 3-(-6)=9$dB. En utilisant les abaques de second ordre, nous trouvons $\xi\approx 0.18$.
-* une pulsation propre en BF égale à $\omega_n = \frac{0.795}{\sqrt{1-2\times 0.18^2}}=0.768$ rad/s.
+* une pulsation naturelle en BF égale à $\omega_n = \frac{0.795}{\sqrt{1-2\times 0.18^2}}=0.768$ rad/s.
 
 #### Vérification
 
@@ -72,4 +72,4 @@ La figure ci-dessus présente le lieu de transfert d'un système en boucle ouver
     <figcaption>Réponse indicielle en boucle fermée (E=1)</figcaption>
 </figure>
 
-Pour vérifier nos résultat, la figure ci-dessus présente l'allure la réponse indicielle en boucle fermée ($E=1$). Nous observons que la valeur finale est proche du gain statique estimé $K=0.5$. De plus, le premier dépassement relatif est environ égal à $D_r(\%)=100\times (0.8-0.51)/0.51=56.86 \%$ ce qui correspond bien à un coefficient d'amortissement $\xi\approx 0.18$ (utilisation des abaques). Enfin la pseudo-période est proche de $T_p=8.5$s ce qui nous donne une pseudo-pulsation de $\omega_p=0.739$ rad/s. Nous obtenons alors une pulsation propre égale à $\omega_n = \frac{0.739}{\sqrt{1-0.18^2}}=0.751$ rad/s, ce qui est proche des résultats attendus.
+Pour vérifier nos résultat, la figure ci-dessus présente l'allure la réponse indicielle en boucle fermée ($E=1$). Nous observons que la valeur finale est proche du gain statique estimé $K=0.5$. De plus, le premier dépassement relatif est environ égal à $D_r(\%)=100\times (0.8-0.51)/0.51=56.86 \%$ ce qui correspond bien à un facteur d'amortissement $\xi\approx 0.18$ (utilisation des abaques). Enfin la pseudo-période est proche de $T_p=8.5$s ce qui nous donne une pseudo-pulsation de $\omega_p=0.739$ rad/s. Nous obtenons alors une pulsation naturelle égale à $\omega_n = \frac{0.739}{\sqrt{1-0.18^2}}=0.751$ rad/s, ce qui est proche des résultats attendus.

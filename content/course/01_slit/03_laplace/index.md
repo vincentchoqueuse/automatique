@@ -251,6 +251,18 @@ où :
 * $p_1, p_2, \ldots, p_n$ sont les pôles du système,
 * $K$ est un facteur de gain.
 
+#### Type du Système
+
+Le **type du système** est un indicateur du **nombre d’intégrateurs** présents dans la chaîne directe du système, c’est-à-dire du **nombre de pôles situés à l’origine** du plan complexe.
+
+Si une fonction de transfert possède **$L$ pôles à l’origine**, elle peut s'écrire sous la forme
+
+$$
+H(s) = K \frac{(s - z_1)(s - z_2) \cdots (s - z_m)}{s^L (s - p_{L+1})(s - p_{N-1}) \cdots (s - p_{N})}
+$$
+
+On dit alors que le système est **de type $N$**.
+
 ##### Représentation
 
 Graphiquement, il est courant de représenter les pôles et les zéros dans le plan complexe via la **représentation des pôles et zéros**. La **représentation des pôles et zéros** sur le plan complexe permet d’analyser rapidement le comportement d’un système dynamique. Les **pôles** sont représentés par des croix $\times$ . Les **zéros** sont représentés par des cercles $\circ$ et indiquent les fréquences où la réponse du système est annulée ($H(s) = 0$).
@@ -292,11 +304,15 @@ Pour l'étape 4, nous utiliserons le plus souvent la table des transformée de L
 
 Les pôles correspondent simplement aux racines de l'équation caractéristique du système. Du coup, un système est BIBO stable si est seulement si tous ses pôles possèdent une partie réelle négative c-à-d $\Re e(p_n)<0$.
 
+
+
+#### Valeur Finale
+
 Lorsqu'un système est stable, sa réponse indicielle pour un échelon d'amplitude $E$ converge vers une valeur finie égale à 
 
 $$y(\infty)=\lim_{t\to \infty} y(t)=H(0)E$$
 
-#### Valeur Finale
+::: details Démonstration
 
 Lorsque l'entrée est un échelon d'amplitude $E$, la transformée de Laplace de la sortie est égale à 
 
@@ -304,14 +320,14 @@ $$Y(s)=H(s)X(s)=\frac{1}{s}H(s)E$$
 
 En utilisant le théorème de la valeur finale, nous obtenons 
 
-::: details Démonstration
+
 $$y(\infty) = \lim_{s\to 0} s Y(s) = \lim_{s\to 0} H(s)E=H(0)$$
 :::
 
 
 ### Réponse Fréquentielle
 
-Comme évoqué dans le chapitre précédent, lorsque l'entrée du système est une exponentielle complexe de pulsation $\omega_0$, c-à-d $x(t)=e^{j\omega_0 t}$, la sortie est également une exponentielle complexe de même pulsation, multipliée par un gain complexe qui dépend de $\omega_0$ :
+Lorsque l'entrée du système est une exponentielle complexe de pulsation $\omega_0$, c-à-d $x(t)=e^{j\omega_0 t}$, la sortie est également une exponentielle complexe de même pulsation, multipliée par un gain complexe qui dépend de $\omega_0$ :
 
 $$
 y(t)= H(j\omega_0)e^{j\omega_0 t}
