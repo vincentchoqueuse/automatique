@@ -43,6 +43,7 @@ export default defineConfig({
           { text: 'Transformée de Laplace', link: '/content/course/01_slit/03_laplace/' },
           { text: 'Systèmes de Premier Ordre', link: '/content/course/01_slit/04_first_order/' },
           { text: 'Systèmes de Second Ordre', link: '/content/course/01_slit/05_second_order/' },
+          { text: 'Examples', link: '/content/course/01_slit/06_examples/' },
         ]
       },
       {
