@@ -388,7 +388,7 @@ Pour analyser et visualiser la réponse fréquentielle d'un système, plusieurs 
    - **Utilité** : Particulièrement utilisé dans la conception de correcteurs
 
 <figure>
-    <img src="./img/fig2_2.png" width="450">
+    <img src="./img/fig2_3.png" width="450">
     <figcaption>Diagramme de Black-Nichols</figcaption>
 </figure>
 
@@ -397,7 +397,7 @@ Pour analyser et visualiser la réponse fréquentielle d'un système, plusieurs 
    - **Utilité** : Fournit une vue directe du comportement fréquentiel du système et de ses caractéristiques de stabilité.
 
 <figure>
-    <img src="./img/fig2_3.png" width="450">
+    <img src="./img/fig2_2.png" width="450">
     <figcaption>Diagramme de Nyquist</figcaption>
 </figure>
 
