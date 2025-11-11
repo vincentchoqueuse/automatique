@@ -301,7 +301,7 @@ Lorsque $\xi < \frac{1}{\sqrt{2}}\approx 0.707$, le module présente un extrému
 
 
 <figure>
-    <img src="./img/fig4.png" width="450">
+    <img src="./img/fig6.png" width="450">
     <figcaption>Diagramme de Nyquist d'un système de second ordre</figcaption>
 </figure>
 
@@ -313,7 +313,7 @@ La figure ci-dessus présente les diagrammes de Nyquist de plusieurs systèmes d
 #### Représentation du module
 
 <figure>
-    <img src="./img/fig5.png" width="450">
+    <img src="./img/fig4.png" width="450">
     <figcaption>Réponse fréquentielle d'un système de second ordre: Module</figcaption>
 </figure>
 
@@ -322,7 +322,7 @@ La figure ci-dessus présente le module du diagramme de Bode de plusieurs systè
 #### Représentation de l'argument
 
 <figure>
-    <img src="./img/fig6.png" width="450">
+    <img src="./img/fig5.png" width="450">
     <figcaption>Réponse fréquentielle d'un système de second ordre: Argument</figcaption>
 </figure>
 
