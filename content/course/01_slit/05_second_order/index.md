@@ -16,8 +16,8 @@ et la sortie est donnée par l'équation différentielle suivante:
 $$\frac{1}{\omega_n^2}\frac{d^2 y(t)}{dt^2}+\frac{2\xi}{\omega_n}\frac{d y(t)}{dt}+y(t)=Kx(t)$$
 
 * $K$ : gain statique,
-* $\xi \ge 0$ : coefficient d\'amortissement,
-* $\omega_n$ : pulsation naturelle ou naturelle (en rad/s).
+* $\xi \ge 0$ : facteur (ou coefficient) d\'amortissement,
+* $\omega_n$ : pulsation naturelle (ou propre) (en rad/s).
 
 Notons que certains ouvrages préfèrent utiliser, au lieu du paramètre
 $\xi$, le facteur de qualité $Q=\frac{1}{2\xi}$.
@@ -255,6 +255,7 @@ $$H(j\omega)=\frac{K}{1-\frac{\omega^2}{\omega_n^2}+j\frac{2\xi\omega }{\omega_n
 
 où $\Omega=\frac{\omega}{\omega_n}$ correspond à la pulsation réduite.
 
+<!--
 #### Partie Réelle et Partie Imaginaire
 
 Pour un système passe-bas de second ordre, la partie réelle et imaginaire de la réponse fréquentielle s'expriment sous la forme suivante: 
@@ -268,7 +269,7 @@ $$
 $$
 \Im m(H(j\omega)) = -\frac{2K \xi\Omega}{\left(1 - \Omega^2\right)^2 + 4\xi^2\Omega^2}
 $$
-
+-->
 
 #### Module et Argument
 
@@ -296,6 +297,7 @@ Lorsque $\xi < \frac{1}{\sqrt{2}}\approx 0.707$, le module présente un extrému
 
 :::
 
+<!--
 
 ### Diagramme de Nyquist
 
@@ -306,6 +308,7 @@ Lorsque $\xi < \frac{1}{\sqrt{2}}\approx 0.707$, le module présente un extrému
 </figure>
 
 La figure ci-dessus présente les diagrammes de Nyquist de plusieurs systèmes de second ordre avec $K=10$, $\omega_n=100$ et $\xi \in \{0.2, 0.707, 1, 1.5\}$.
+-->
 
 
 ### Diagramme de Bode

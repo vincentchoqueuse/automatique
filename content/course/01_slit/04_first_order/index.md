@@ -169,7 +169,7 @@ Pour analyser cette réponse, il est courant de recourir aux décompositions sui
 * Partie réelle / Partie imaginaire: $H(j\omega)=\Re e(H(j\omega)) +j\Im m(H(j\omega))$
 * Module / argument: $H(j\omega)=|H(j\omega)|e^{j\arg(H(j\omega))}$
 
-
+<!--
 #### Partie Réelle et Partie Imaginaire
 
 Pour un système passe-bas de premier ordre, la partie réelle et imaginaire de la réponse fréquentielle s'expriment sous la forme suivante: 
@@ -183,6 +183,7 @@ $$
 $$
 \Im m(H(j\omega)) = -\frac{K \omega \tau}{1 + (\omega \tau)^2}
 $$
+-->
 
 
 #### Module et Argument
@@ -199,6 +200,7 @@ $$\arg[H(j\omega)]=\arg[K]-\arctan(\omega\tau)$$
 
 Notons que lorsque $K>0$, $\arg[K]=0$.
 
+<!--
 ### Diagramme de Nyquist
 
 Le diagramme de Nyquist présente l'ensemble la partie imaginaire $\Im m(H(j\omega))$ en fonction de la partie $\Re e(H(j\omega))$. la figure suivante présente la diagramme de Nyquist d'un système de premier ordre.
@@ -210,7 +212,7 @@ Le diagramme de Nyquist présente l'ensemble la partie imaginaire $\Im m(H(j\ome
 
 La courbe résultante dans le plan complexe est une trajectoire semi-circulaire partant de 
 $K$ (pour $\omega=0$) et tendant vers l'origine c-à-d 0 (pour $\omega \to \infty$). En $\omega_c = \frac{1}{\tau}$ (rad/s), nous obtenons $\Re e(H(j\omega_c))=\frac{K}{2}$ et $\Im m(H(j\omega_c))=-\frac{K}{2}$
-
+-->
 
 ### Diagramme de Bode
 

@@ -392,6 +392,7 @@ Pour analyser et visualiser la réponse fréquentielle d'un système, plusieurs 
     <figcaption>Diagramme de Black-Nichols</figcaption>
 </figure>
 
+<!--
 3. **Diagramme de Nyquist** :
    - **Représentation** : La réponse fréquentielle $H(j\omega)$ est représentée dans le plan complexe (partie réelle en abscisse, partie imaginaire en ordonnée).
    - **Utilité** : Fournit une vue directe du comportement fréquentiel du système et de ses caractéristiques de stabilité.
@@ -400,6 +401,7 @@ Pour analyser et visualiser la réponse fréquentielle d'un système, plusieurs 
     <img src="./img/fig2_2.png" width="450">
     <figcaption>Diagramme de Nyquist</figcaption>
 </figure>
+-->
 
 
 ## Interconnexion des SLITs
