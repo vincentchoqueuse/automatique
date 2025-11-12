@@ -42,7 +42,7 @@ for sys in systems:
             plotter.plot_bode(name, w, mag, phase)
 
         elif rtype == "black":
-            phase, mag = system.black_response()
-            plotter.plot_black(name, phase, mag)
+            w, phase, mag = system.black_response()
+            plotter.plot_black(name, w, phase, mag)
 
 print("✅ Tous les graphiques générés dans /outputs")

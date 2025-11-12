@@ -46,7 +46,7 @@ class LTISystem:
         w, H = signal.freqresp(self.system, w=w)
         mag = 20 * np.log10(np.abs(H))
         phase = np.angle(H, deg=True)
-        return phase, mag
+        return w, phase, mag
 
 
 class FirstOrderSystem(LTISystem):

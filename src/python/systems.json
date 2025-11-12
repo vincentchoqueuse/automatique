@@ -5,6 +5,7 @@
     "params": {"K": 2.0, "tau": 0.5},
     "response": [
       {"type": "step", "input": 2, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -15,6 +16,7 @@
     "params": {"K": 5.0, "tau": 3},
     "response": [
       {"type": "step", "input": 5, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -25,6 +27,7 @@
     "params": {"K": 2.5, "tau": 0.5},
     "response": [
       {"type": "step", "input": 10, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -35,6 +38,7 @@
     "params": {"K": 10.0, "tau": 9},
     "response": [
       {"type": "step", "input": 4, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -45,6 +49,7 @@
     "params": {"K": 10.0, "zeta": 0.2, "wn": 5.0},
     "response": [
       {"type": "step", "input": 1, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -55,6 +60,7 @@
     "params": {"K": 1.0, "zeta": 0.5, "wn": 10.0},
     "response": [
       {"type": "step", "input": 1, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -65,6 +71,7 @@
     "params": {"K": 2.0, "zeta": 1.0, "wn": 1.0},
     "response": [
       {"type": "step", "input": 1, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]
@@ -75,6 +82,7 @@
     "params": {"K": 5.0, "zeta": 2.0, "wn": 20.0},
     "response": [
       {"type": "step", "input": 1, "unit_x": "s"},
+      {"type": "impulse", "input": 1, "unit_x": "s"},
       {"type": "bode", "unit_x": "rad/s", "unit_y": "nat"},
       {"type": "black", "unit_x": "deg", "unit_y": "dB"}
     ]

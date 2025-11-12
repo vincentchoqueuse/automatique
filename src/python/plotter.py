@@ -33,8 +33,24 @@ class SystemPlotter:
         )
         pio.write_html(fig, f"{self.output_dir}/{name}_bode.html", include_plotlyjs="cdn")
 
-    def plot_black(self, name, phase, mag):
+    def plot_black(self, name, w, phase, mag):
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=phase, y=mag, mode="lines", name="Black"))
-        fig.update_layout(title=f"Diagramme de Black — {name}", xaxis_title="Phase (°)", yaxis_title="Gain (dB)")
+        fig.add_trace(go.Scatter(
+            x=phase,
+            y=mag,
+            mode="lines",
+            name="Black",
+            customdata=w,  # attach angular frequency to each point
+            hovertemplate=(
+                "Phase: %{x:.2f}°<br>"
+                "Gain: %{y:.2f} dB<br>"
+                "ω: %{customdata:.3f} rad/s<br>"
+                "<extra></extra>"  # hides the default trace name box
+            )
+        ))
+        fig.update_layout(
+            title=f"Diagramme de Black — {name}",
+            xaxis_title="Phase (°)",
+            yaxis_title="Gain (dB)"
+        )
         pio.write_html(fig, f"{self.output_dir}/{name}_black.html", include_plotlyjs="cdn")
