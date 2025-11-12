@@ -70,7 +70,9 @@ export default defineConfig({
               items: [
                 { text: 'Table des Transformées', link: '/content/appendix/table/' },
                 { text: 'Liste des circuits', link: '/content/appendix/circuit_list/' },
-                { text: "Rappels d'Electronique", link: '/content/appendix/circuit_analysis/' }
+                { text: "Rappels d'Electronique", link: '/content/appendix/circuit_analysis/' },
+                { text: "Abaques de second ordre", link: '/content/appendix/lookup_charts/' },
+                
               ]
             }
         ],
