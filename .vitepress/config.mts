@@ -54,6 +54,7 @@ export default defineConfig({
           { text: 'Stabilité en BF', link: '/content/course/02_closed_loop/02_stability/' },
           { text: 'Performances Statiques', link: '/content/course/02_closed_loop/03_static/' },
           { text: 'Performances Dynamiques', link: '/content/course/02_closed_loop/04_dynamic/' },
+          { text: 'Exemples', link: '/content/course/02_closed_loop/05_examples/' },
         ]
       },
       {

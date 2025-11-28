@@ -1,15 +1,14 @@
 # build_from_json.py
 import os
 import json
-from models import FirstOrderSystem, SecondOrderSystem
-from plotter import SystemPlotter
+from python_control import bode, nichols, step
 
 # Charger la configuration
-with open("systems.json") as f:
+with open("systems_nichols.json") as f:
     systems = json.load(f)
 
 # Créer le dossier de sortie
-folder = "../../public/aav1"
+folder = "../../public/aav2"
 os.makedirs(folder, exist_ok=True)
 plotter = SystemPlotter(folder)
 

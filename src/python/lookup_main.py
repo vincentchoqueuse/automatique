@@ -72,7 +72,7 @@ fig2.add_trace(go.Scatter(
     y=Ts,
     mode="lines",
     name="Tₛ,5%",
-    hovertemplate="ζ = %{x:.3f}<br>Tₛ,5% = %{y:.3f} s<extra></extra>"
+    hovertemplate="ζ = %{x:.3f}<br>ωₙTₛ = %{y:.3f} s<extra></extra>"
 ))
 
 fig2.update_layout(

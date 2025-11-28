@@ -1,0 +1,29 @@
+[
+  {
+    "id": "sys1",
+    "name": "system 1 – 1st order, medium speed",
+    "params": { "num": [2.0], "den": [1, 2] },
+    "w": {"min": -1, "max": 2}
+  },
+  {
+    "id": "sys2",
+    "name": "system 2 – 2nd order, underdamped (ξ≈0.3)",
+    "params": { "num": [1.0], "den": [1, 0.6, 1] }
+  },
+  {
+    "id": "sys3",
+    "name": "system 3 – integrator + 1st order",
+    "params": { "num": [1.0], "den": [1, 1, 0] },
+    "w": {"min": -2, "max": 1.2}
+  },
+  {
+    "id": "sys4",
+    "name": "system 4 – 3rd order, lightly damped",
+    "params": { "num": [1.0], "den": [1, 0.4, 1, 0.1] }
+  },
+    {
+    "id": "sys5",
+    "name": "system 5 – 3rd order, lightly damped",
+    "params": { "num": [0.2], "den": [1, 0.4, 1, 0.1] }
+  }
+]
