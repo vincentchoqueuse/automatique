@@ -9,37 +9,54 @@ outline: [2,3]
 Pour corriger un système, une stratégie possible consiste à ajouter un correcteur dans la boucle ouverte.
 
 <figure>
-    <img src="./img/sys_closed3.png" width="410">
+    <img src="./img/sys_closed4.png" width="410">
     <figcaption>Système bouclé intégrant un correcteur</figcaption>
 </figure>
 
 * $C(s)$: fonction de transfert du correcteur,
-* $F(s)$: fonction de transfert du système à corriger,
-* $G(s)=C(s)F(s)$: fonction de transfert de la boucle ouverte.
+* $G(s)$: fonction de transfert du système non corrigé ou système à corriger,
+* $H_{bo}(s)=C(s)G(s)$: fonction de transfert de la boucle ouverte,
+* $H_{bf}(s)= H_{bo}(s) / (1+ H_{bo}(s))$: fonction de transfert de la boucle fermée.
 
-Dans ce chapitre, nous allons considérer différents correcteurs usuels.
+Dans ce chapitre, nous allons considérer différents correcteurs usuels et introduire des techniques de réglage basées sur le lieu de Black (Nichols).
 
-## Correcteurs Usuels
+## Correcteur Proportionnel (P)
 
-### Correcteur Proportionnel (P)
-
-#### Fonction de transfert
+### Fonction de transfert
 
 La fonction de transfert d'un correcteur proportionnel est donnée par :
 
-$$C_p(s)=K$$
+$$C_p(s)=K_p$$
 
-* $K>0$: gain ou gain proportionnel.
+où $K_p>0$: désigne le gain (ou gain proportionnel).
 
-#### Avantages et inconvénients
+#### Analyse harmonique 
 
-**Avantages :**
-- Simple à implémenter et à régler.
-- Augmente la rapidité de réponse en boucle fermée.
+* Gain : 
 
-**Inconvénients :**
-- N'élimine pas l'erreur statique (erreur résiduelle possible pour une entrée en échelon).
+$$|G_p(j\omega)|_{dB} = 20 \log_{10}(K_p)$$
 
+* Argument / Phase :
+
+$$\arg[G_p(j\omega)] = 0$$
+
+Le correcteur proportionnel impacte uniquement le gain et apporte un gain égal à $20 log_10(K_p)$. Par rapport au diagramme de Black, l'utilisation d'un gain $K_p$ va permettre de translater verticalement le lieu de transfert de la boucle ouverte $H_{bo}(s)=K_p G(s)$. Lorsque $K_p>1$, le lieu de transfert est translaté vers le haut ce qui permet d'améliorer la précision en boucle fermée. Lorsque $K_p<1$, le lieu de transfert est translaté vers le bas ce qui permet d'augmenter les marges de gain et de phase.
+
+
+#### Technique de réglage 
+
+Une technique possible consiste à choisir $K_p$ de sorte que le lieu de la boucle ouverte se positionne à une distance appropriée du point critique $(-180^\circ, 0 dB)$, pour garantir une stabilité suffisante en boucle fermée. 
+dynamiques souhaitées. En pratique, on ajuste le gain jusqu’à obtenir des marges de stabilité satisfaisantes, typiquement une marge de phase supérieure à $45^\circ$ où une marge de gain de $6~\text{dB}$.
+
+##### Exemple de réglage à partir de la marge de phase
+
+Si l’on souhaite une marge de phase $\Phi_m \approx 45^\circ$, on commence par rechercher la pulsation (\omega_\varphi) telle que
+
+$$\arg\big[G(j\omega_\varphi)\big] = -180^\circ + \Phi_m = -135^\circ.$$
+
+À cette pulsation, on lit le module en dB : $|G(j\omega_\varphi)|_{dB}$. Pour que le gain de la boucle ouverte corrigée soit ramené à $0~\text{dB}$ à cette pulsation, on choisit alors :
+
+$$ K_p = 10^{-\frac{|G(j\omega_\varphi)|_{dB}}{20}}$$ 
 
 ### Correcteur Proportionnel-Intégral (PI)
 

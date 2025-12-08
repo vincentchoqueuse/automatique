@@ -4,14 +4,14 @@ outline: [2,3]
 
 # Performances Statiques des Systèmes Bouclés
 
-Cette section analyse la précision des systèmes bouclés en fonction de la classe du système en boucle ouverte. Il détaille l’évaluation de l’erreur en régime permanent face à des signaux d’entrée (échelon, rampe) et montre comment l’ajout d’intégrateurs influence la précision. La problématique du rejet des perturbations est également abordée, mettant en évidence le rôle fondamental de la classe du système pour assurer robustesse et atténuation des perturbations.
+Cette section analyse la précision des systèmes bouclés en fonction de la type du système en boucle ouverte. Il détaille l’évaluation de l’erreur en régime permanent face à des signaux d’entrée (échelon, rampe) et montre comment l’ajout d’intégrateurs influence la précision. La problématique du rejet des perturbations est également abordée, mettant en évidence le rôle fondamental de la type du système pour assurer robustesse et atténuation des perturbations.
 
 
 ## Objectif
 
-Dans ce chapitre, nous montrons comment analyser les performances statiques d'un système en boucle fermée (précision, rejet des perturbations) à partir de la classe du système en boucle ouverte.
+Dans ce chapitre, nous montrons comment analyser les performances statiques d'un système en boucle fermée (précision, rejet des perturbations) à partir de la type du système en boucle ouverte.
 
-### Classe du système
+### Type du système
 
 Le comportement du système en boucle fermée va directement dépendre de la **classe** du système en boucle ouverte.
 
@@ -21,7 +21,7 @@ $$
 G(s) = \frac{K (s - z_1)(s - z_2) \cdots (s - z_n)}{s^L(s - p_1)(s - p_2) \cdots (s - p_n)}
 $$
 
-* $L$: classe du système
+* $L$: type du système
 * $G(0)$: gain statique du système.
 
 
@@ -95,7 +95,7 @@ La figure ci-dessus présente la réponse à une rampe en boucle fermée de deux
 
 ### Synthèse
 
-La tableau suivant résume l'expression de l'erreur en régime permanent pour des entrées de type échelon ou rampe en fonction de la classe du système en boucle ouverte. Dans ce tableau, $G_l=\lim_{s\to 0} s^l G(s)$.
+La tableau suivant résume l'expression de l'erreur en régime permanent pour des entrées de type échelon ou rampe en fonction de la type du système en boucle ouverte. Dans ce tableau, $G_l=\lim_{s\to 0} s^l G(s)$.
 
 | Classe $L$ | Échelon $Eu(t)$                 | Rampe $Et$               |
 |----------------|-------------------------------------|---------------------------------|

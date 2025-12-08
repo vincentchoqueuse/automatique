@@ -6,7 +6,7 @@
 Ce chapitre développe une méthodologie pour analyser le comportement d’un système en boucle fermée au travers de plusieurs critères :
 
 * la stabilité : lien entre pôles et stabilité, critère du revers, marges de robustesse.
-* les performances statiques : influence de la classe du système sur la précision et le rejet des perturbations.
+* les performances statiques : influence de la type du système sur la précision et le rejet des perturbations.
 * les performances dynamiques : estimation graphique des paramètres temporels via l’abaque de Black-Nichols et l’approximation second ordre.
 
 ## Hypothèses

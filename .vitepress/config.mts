@@ -61,7 +61,10 @@ export default defineConfig({
         text: 'AA3 : Synthèse fréquentielle de correcteurs linéaires',
         link: '/content/course/03_controller/',
         items: [
-          { text: 'Liste des Correcteurs', link: '/content/course/03_controller/01_usual/' },
+          { text: 'Contexte & Hypothèses', link: '/content/course/03_controller/01_context/' },
+          { text: 'Correcteur P', link: '/content/course/03_controller/02_proportional/' },
+          { text: 'Correcteur PI', link: '/content/course/03_controller/03_proportional_integral/' },
+           { text: 'Correcteur AP', link: '/content/course/03_controller/04_ap/' },
         ]
       }
       ],
