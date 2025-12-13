@@ -65,6 +65,7 @@ export default defineConfig({
           { text: 'Correcteur P', link: '/content/course/03_controller/02_proportional/' },
           { text: 'Correcteur PI', link: '/content/course/03_controller/03_proportional_integral/' },
            { text: 'Correcteur AP', link: '/content/course/03_controller/04_ap/' },
+           { text: 'Exemples', link: '/content/course/03_controller/05_examples/' },
         ]
       }
       ],
