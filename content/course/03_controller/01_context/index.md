@@ -13,13 +13,23 @@ Pour corriger un système, une stratégie possible consiste à ajouter un correc
     <figcaption>Système bouclé intégrant un correcteur</figcaption>
 </figure>
 
+
+### Notations 
+
 * $C(s)=U(s)/\epsilon(s)$: fonction de transfert du correcteur où $U(s)$ correspond à la transformée de Laplace du signal de commande,
 * $G(s)=Y(s)/U(s)$: fonction de transfert du système non corrigé ou système à corriger,
 * $H_{bo}(s)=C(s)G(s)$: fonction de transfert de la boucle ouverte,
 * $H_{bf}(s)= H_{bo}(s) / (1+ H_{bo}(s))$: fonction de transfert de la boucle fermée.
 
-## Liste des correcteurs et objectifs
+### Définition mathématiques
 
+Dans ce chapitre, nous définissons la *pulsation de coupure à 0dB*, notée $\omega_c$, comme la pulsation telle que 
+
+$$|H_{bo}(j\omega_c)|_{dB} = 0~\text{dB}$$
+
+
+
+## Liste des correcteurs et objectifs
 
 Dans ce chapitre, nous allons considérer les correcteurs:
 
@@ -29,3 +39,4 @@ Dans ce chapitre, nous allons considérer les correcteurs:
 * Correcteur Proportionnel Intégral-Dérivateur (PID).
 
 Chaque correcteur dépend d'un ou de plusieurs paramètres que l'utilisateur peut régler afin de respecter les contraintes d'un cahier des charges. Dans ce chapitre, nous présentons différentes techniques de réglage basées sur le lieu de Black (Nichols) en boucle ouverte.
+
